@@ -1,6 +1,12 @@
-# refold
+# refdl
 
 Build a reference tree in your environment. You can build up a directory tree by specifying it in conf.yaml file.
+
+## Usage
+Prepare the conf.yaml file and just execute refdl.py in the same directory.
+```
+./refdl.py
+```
 
 ## Prerequisit
 - Python version 3 or higher
