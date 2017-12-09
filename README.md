@@ -7,7 +7,14 @@ Build a reference tree in your environment. You can build up a directory tree by
 - PyYaml (https://github.com/yaml/pyyaml)
 
 ## conf.yaml syntax
-The directory for references to be installed in is specified in the key of mappings, whose value is also mappings. When the value is a string, refdl recognize it as url to a reference and try 'wget' to download it into the file, named the key value.
+The directory where references to be installed is specified by the key of mappings, whose value is also mappings. When the value is a string, refdl recognize it as url to a reference and try 'wget' to download it into the file, named as the key. Empty directories are not created.
+
+```
+dir name:
+  [mappings]
+file name: [string]
+```
+where \[mappings\] includes no or more entries shown above.
 
 ### Example
 ```conf.yaml
@@ -26,7 +33,6 @@ will build a directory tree below on the current directory
      |- sub1
         |- ref1
         |- ref2
-     |- sub2
   |- root2
      |- ref3
 ```
